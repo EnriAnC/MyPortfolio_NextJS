@@ -1,5 +1,7 @@
 .aboutme{
     padding: 1rem 5vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .aboutme >h2{
@@ -9,20 +11,29 @@
 .article{
     display: flex;
     align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    font-size: 2rem;    
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-
-
-.article:last-child{
-    margin-top: 2rem;
-    justify-content: flex-end;
+.article svg{
+    width: 100px;
+    object-fit: cover;
+}
+.article:nth-child(2){
+    flex-direction: row;
 }
 
-.article p{
+.article:nth-child(2) p{
+    text-align: justify;
     width: 60%;
+    font-size: 1.25rem;
 }
 
-.svgtech1{
+.article .svgtech1{
     width: 300px;
     height: 300px;
     animation: svgtech1 10s infinite;
@@ -30,10 +41,15 @@
     /* clip-path: circle(75px) ; */
 }
 
-.svgtech1 path{
+.article .svgtech1 path{
+    stroke: white;
+    /* stroke-dasharray: 1000, 1000; */
+    stroke-dashoffset: 10000;
     opacity: 0;
-    fill: white;
-    animation: svgtech1-path 5s forwards;
+    fill: transparent;
+    animation: svgtech1-path 3s forwards;
+    stroke-width: 15px;
+    stroke-linejoin: round;
 }
 
 @keyframes svgtech1 {
@@ -55,16 +71,27 @@
 }
 
 @keyframes svgtech1-path {
+    0%{
+        stroke-dasharray: 10000, 13000;
+    }
+    99%{
+        stroke-dashoffset: 10000;
+    }
     100%{
         opacity: 1;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 10000, 0;
     }
 }
 
 @media (max-width:424px) {
     .article{
-        flex-direction: column;
+        flex-direction: column !important;
     }
     .article p{
+        width: 100%;
+    }
+    .article:nth-child(2) p{
         width: 100%;
     }
 }

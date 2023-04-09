@@ -49,12 +49,13 @@ main{
                   "main" 90vh;
 }
 
-nav{
+.nav{
   grid-area: nav;
 }
 
 .page{
   grid-area: main;
+  overflow-x: hidden;
   font-family: 'Calibri';
   display: flex;
   flex-direction: column;

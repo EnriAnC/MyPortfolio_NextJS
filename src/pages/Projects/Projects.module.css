@@ -1,0 +1,12 @@
+.projects{
+    animation: projects-bg 1s;
+}
+
+@keyframes projects-bg {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

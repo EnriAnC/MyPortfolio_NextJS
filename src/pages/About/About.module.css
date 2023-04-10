@@ -2,6 +2,16 @@
     padding: 1rem 5vw;
     display: flex;
     flex-direction: column;
+    animation: bg-about 1s;
+}
+
+@keyframes bg-about {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .aboutme >h2{

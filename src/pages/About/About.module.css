@@ -1,8 +1,11 @@
 .aboutme{
-    padding: 1rem 5vw;
+    padding: 0rem 5vw 1rem 5vw;
     display: flex;
     flex-direction: column;
     animation: bg-about 1s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory ;
 }
 
 @keyframes bg-about {
@@ -14,33 +17,45 @@
     }
 }
 
-.aboutme >h2{
+.aboutme h2{
     margin-bottom: 1rem;
+    align-items: center;
 }
 
 .article{
     display: flex;
     align-items: center; 
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
     width: 100%;
     font-size: 2rem;    
     text-align: center;
-    margin-bottom: 1rem;
+    /* margin-bottom: 5rem; */
+    min-height: calc(100vh - 4.25rem);  
+    scroll-snap-align: start;
+}
+
+.boxIcons{
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .article svg{
     width: 100px;
     object-fit: cover;
 }
-.article:nth-child(2){
+.article:nth-child(1){
+    /* margin-bottom: 2rem; */
     flex-direction: row;
+    justify-content: center;
 }
 
-.article:nth-child(2) p{
+.article:nth-child(1) p{
     text-align: justify;
     width: 60%;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .article .svgtech1{
@@ -101,7 +116,7 @@
     .article p{
         width: 100%;
     }
-    .article:nth-child(2) p{
+    .article:nth-child(1) p{
         width: 100%;
     }
 }

@@ -10,7 +10,7 @@
     /* background-blend-mode: darken; */
     background-clip: text;
     height: 100%;
-    animation: bg-image 8s forwards;
+    animation: bg-image 4s forwards;
     background-repeat: no-repeat;
     background-size: 100%;
     /* padding: 1rem; */

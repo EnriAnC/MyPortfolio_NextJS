@@ -5,7 +5,7 @@ const Hero: React.FC = (props) => {
     return (
         <div className={styles.hero}>
             <h1>Enrique Ansa</h1>
-            <h2><span>Desarrollador</span><br /><span>Full Stack</span><br /><span>JavaScript</span><br /><>Trainee</></h2>
+            <h2><span>Full Stack Web</span><br /><span>Developer</span><br /><span> </span><br /><span> </span></h2>
         </div>
     )
 }

@@ -55,15 +55,26 @@ main{
 
 .page{
   grid-area: main;
-  overflow-x: hidden;
+  /* overflow: hidden; */
   font-family: 'Calibri';
   display: flex;
   flex-direction: column;
-  padding: 2vh 1vw;
+  padding: 0 1vw;
 }
 
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
 
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
 
+.fill-black{
+  fill: #000 !important;
+}
 
 
 @media (prefers-color-scheme: dark) {
